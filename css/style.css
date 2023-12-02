@@ -1,141 +1,130 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 :root {
-    --main-color: #212121;
-    --blue-color: #2196F3;
-    --white-color: #FFF;
-    --text-color: #757575;
-    --footer-color: rgba(255, 255, 255, 0.60);
+    --main-color: #7d7d7d;
+    --accent-color: #03a9f4;
+    --Heading-color: #b4ad9e;
+    --title-color: #626262;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
 body {
-    font-family: Roboto;
-   }
-header span, footer span {
-    color: var(--blue-color);
-    font-family: Raleway;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.78px;
-}
-header a, footer a {
-    color: #000;
-    font-family: Raleway;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.78px;
-}
-.list-item {
-    color: var(--main-color);
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.28px;
-}
-.list-item:hover {
-    color: var(--blue-color);
-}
-h1 {
-    color: var(--white-color);
-    text-align: center;
-    font-family: Roboto;
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 60px; /* 136.364% */
-    letter-spacing: 2.64px;
-    text-transform: uppercase;
-}
-.business {
-    background: #2F303A;
-}
-.button {
-    color: var(--white-color);
-    text-align: center;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 30px; /* 187.5% */
-    letter-spacing: 0.96px;
-    border-radius: 4px;
-    background: #2196F3;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
-.title {
-    color: v;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.42px;
-    text-transform: uppercase;
-}
-.text {
-    color: #757575;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
+    font-family: "Playfair Display";
     font-weight: 400;
-    line-height: 24px; /* 171.429% */
-    letter-spacing: 0.42px;
-}
-.about {
-    color: #212121;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.08px;
-}
-.name {
-    color: #212121;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.48px;
-}
-.profession {
-    color: #757575;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.48px;
-}
-.adress {
-    color: #FFF;
-    font-family: Roboto;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 171.429% */
-    letter-spacing: 0.42px;
+    line-height: 1.2;
 }
-.contact {
-    color: rgba(255, 255, 255, 0.60);
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 171.429% */
-    letter-spacing: 0.42px;
-}
+
 .container {
     margin-left: auto;
     margin-right: auto;
     width: 910px;
     padding-right: 15px;
     padding-left: 15px;
+}
+
+.header {
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item+.menu-item {
+    margin-left: 100px;
+}
+
+.menu-link {
+    color: var(--main-color);
+    line-height: 1.35;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: var(--accent-color);
+}
+
+.title {
+    display: none;
+}
+
+.news-category {
+    margin-top: 32px;
+    text-transform: uppercase;
+    color: var(--Heading-color);
+    font-family: "Ubuntu";
+    line-height: 1.14;
+    font-weight: 400;
+}
+
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 130px;
+}
+
+.news-item {
+    width: 420px;
+}
+
+.news-title {
+    margin-top: 32px;
+    color: var(--title-color);
+    font-size: 30px;
+    line-height: 1.33;
+}
+
+.news-text {
+    margin-top: 40px;
+    color: var(--title-color);
+    line-height: 1.36;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 165px;
+    height: 60px;
+    margin-bottom: 65px;
+    margin-top: 95px;
+
+    color: var(--title-color);
+    line-height: 1.36;
+    background-color: transparent;
+    border: 1px solid var(--title-color);
 }
